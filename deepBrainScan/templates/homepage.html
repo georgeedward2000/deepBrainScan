@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" media="all" href="{% static 'css/style.css' %}"/>
+<link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<img src="{% static 'images/ban.png' %}" width="550" height="364"/>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div id="welcome" class="container">
+    	
+<div class="title">
+	  <h2>Welcome to a Deep Analysis Experience</h2>
+	  	
+		</div>
+		<div>
+			<h3>Upload a Brain Magnetic Resonance Image (MRI) </h3>
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type="file" name="sentFile" />
+				<input type="submit" name="submit" value="Upload" />
+			</form>
+			
+		</div>
+<div class = "image">
+	<img src="data:image/png;base64,{{ name }}"  onerror="this.style.visibility = 'hidden'" />
+</div>
+</body>
+</html>
