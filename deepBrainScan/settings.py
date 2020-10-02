@@ -26,7 +26,7 @@ SECRET_KEY = '#%k#cc$j*&s1u@!i&*6w2n!dsiz^-$1zje6v@#$s3gn_vpjpy$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["deeperbrain.herokuapp.com","172.31.38.65","127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
